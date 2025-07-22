@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+
+    <!-- MathJax -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\(", "\)"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <!-- Header and Footer -->
     <title>Open Problems</title>
-</head>
+  </head>
 <body>
 <a href="/index.html">Home</a>
 <a href="/papers.html">My Papers</a>
 <a href="/openproblems.html">Open Problems</a>
 
   <h1>Open Problems</h1>  
+
+  <p>Here are some open problems that I have encountered, sorted by subject. 
+    I think they are approachable, and I can send further thoughts if you reach out.
+    I expect the list will grow.
+  </p>
+
+  <h2>Polyominoes</h2>
+
+  <p>One long-standing program in combinatorics has been to understand tilings of a shape with polyominoes. 
+    A <a href="https://en.wikipedia.org/wiki/Polyomino">polyomino</a> is a contiguous shape formed of squares joined edge to edge.
+    One question one can pose about tilings is what are the properties of the metagraph.
+    A metagraph, denoted $\mathcal M(G(n,m), k)$, has as vertices the possible tilings of an $n\times m$ rectangle with $k$-polyominoes.
+    There is an edge between two vertices, that is, between two tilings, if they differ in exactly two $k$-polyominoes.
+    It is very poorly understood. We do not know if $\mathcal M(G(n, n), \frac{n^2}{3})$ is connected when 3 divides $n$.
+    One way to explore this problem, presented in Jamie Tucker-Foltz's <a href="https://arxiv.org/pdf/2307.15996">Locked Polyomino Tilings</a>,
+    is to search for "locked polyomino tilings." A tiling is called locked if, when viewed as a vertex of the appropriate metagraph,
+    it has no neighbors. Tucker-Foltz constructs locked tilings with $k = 3$, $k = 4$, and $k = 5$.
+    It is not known if there are locked tilings on finite rectangular graphs for larger values of $k$, though
+    Tucker-Foltz has code to explore generating locked tilings and computing metagraphs.
+  </p>
+
+  <p>I worked on trying to find a locked tiling for $k = 6$ by hand at the Auburn 2024 REU with no luck. 
+    However, I was probably insufficiently clever, and it seems totally feasible to find one. 
+    This is one potential direction. Tucker-Foltz lists other open problems and directions, including tiling a torus or an infinite grid. 
+  </p>
 
 </body>
 </html>

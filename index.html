@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Hamrick's website</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<a href="/index.html">Home</a>
-<a href="/papers.html">My Papers</a>
-<a href="/openproblems.html">Open Problems</a>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/papers.html">My Papers</a></li>
+            <li><a href="/openproblems.html">Open Problems</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+    background-color: #4F758B; /* Darker teal for header */
+    color: white;
+    padding: 10px 0;
+}
+    ol li {
+        padding: 5px 0px;
+        }
+    
+    ul li {
+            padding: 4px 0px;
+        }
+    
+        nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Aligns navigation to the right */
+}
+nav ul li {
+    display: inline;
+    margin-left: 15px; /* Space between the tabs */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #985090; /* Darker teal on hover */
+    border-radius: 4px;
+}
+    
+    .supsub {
+            display: inline-block;
+        }
+    
+    .supsub sup,
+    .supsub sub {
+            position: relative;
+            display: block;
+            line-height: .6;
+        }
+    
+    .supsub sub {
+            top: .3em;
+        }
+    .hidden { display: none; }
+    .abstract { width: 100%; font-size: smaller; font-style: normal; margin: 0px; padding: 0px; 
+        padding-top:5px;
+         cursor: pointer; }
+</style>
 
 <h1>Hello!</h1>
 
